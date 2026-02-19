@@ -1,83 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Beautiful Webpage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beautiful Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1em 0;
-        }
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #fff;
+      line-height: 1.6;
+    }
 
-        nav ul {
-            padding: 0;
-            list-style-type: none;
-        }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+    }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
+    nav a {
+      margin-left: 30px;
+      text-decoration: none;
+      color: #e2e8f0;
+      transition: 0.3s ease;
+      font-weight: 500;
+    }
 
-        section {
-            margin: 2em 5%;
-            padding: 1em;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    nav a:hover {
+      color: #38bdf8;
+    }
 
-        footer {
-            text-align: center;
-            padding: 1em 0;
-            background-color: #333;
-            color: white;
-        }
-    </style>
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      flex-direction: column;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      max-width: 800px;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5f5;
+      max-width: 600px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      padding: 14px 32px;
+      border-radius: 999px;
+      border: none;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      color: white;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 80px 60px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(12px);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #38bdf8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255,255,255,0.05);
+      margin-top: 40px;
+      color: #cbd5f5;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Jenkins Tutorial</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the home section of the webpage.</p>
-    </section>
+  <header>
+    <div class="logo">MySite</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Features</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <section id="about">
-        <h2>About</h2>
-        <p>Learn more about us in this section.</p>
-    </section>
+  <section class="hero">
+    <h1>Build Something Beautiful Today</h1>
+    <p>Create stunning websites with modern design, smooth animations, and responsive layouts.</p>
+    <button class="btn">Get Started</button>
+  </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Get in touch with us here.</p>
-    </section>
+  <section class="features">
+    <div class="card">
+      <h3>⚡ Fast Performance</h3>
+      <p>Optimized structure ensures smooth and blazing fast user experience across devices.</p>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Beautiful Webpage</p>
-    </footer>
+    <div class="card">
+      <h3>🎨 Modern Design</h3>
+      <p>Clean UI with gradients, glass effects, and beautiful visual hierarchy.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Fully Responsive</h3>
+      <p>Looks perfect on desktops, tablets, and mobile devices automatically.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 MySite. All rights reserved.
+  </footer>
+
 </body>
 </html>
